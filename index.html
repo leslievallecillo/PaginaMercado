@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="description" content="Smartfood PRO - Batidos nutricionales">
+  <title>Smartfood PRO </title>
+  <link rel="stylesheet" href="Style.css"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"/>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+  <style>
+   
+    header .logo {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+    }
+    
+    header .logo img {
+      height: 60px;
+      width: 60px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 2px solid #444;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+    }
+    
+    header .logo h1 {
+      margin: 0;
+      font-size: 1.8rem;
+      font-weight: 700;
+      color: #fff; 
+      text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
+    }
+    
+    header .logo h1 span {
+      color: #4fc3f7; 
+    }
+    
+    header .logo p {
+      margin: 5px 0 0;
+      font-size: 0.9rem;
+      color: #ccc; 
+      font-weight: 500;
+    }
+    
+    @media (max-width: 768px) {
+      header .logo img {
+        height: 50px;
+        width: 50px;
+      }
+      
+      header .logo h1 {
+        font-size: 1.5rem;
+      }
+      
+      header .logo p {
+        font-size: 0.8rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header style="background-color: #000; border-bottom: 1px solid #333;">
+    <div class="logo">
+      <img src="imagenes/Logo.jpg" alt="Logo Smartfood PRO">
+      <div class="logo-text">
+        <h1>SMARTFOOD <span>PRO</span></h1>
+        <p>Nutrición Inteligente para Alto Rendimiento</p>
+      </div>
+    </div>
+    <nav id="nav-principal">
+      <a href="#productos">Productos</a>
+      <a href="#beneficios">Beneficios</a>
+      <a href="#nosotros">Nosotros</a>
+      <a href="#testimonios">Testimonios</a>
+      <a href="#contacto">Contacto</a>
+    </nav>
+    <div class="derecha-header">
+      <div class="icono-carrito">
+        <i class="fas fa-shopping-cart"></i>
+        <span class="contador-carrito">0</span>
+      </div>
+      <button class="boton-menu" aria-label="Toggle menu">
+        <i class="fas fa-bars"></i>
+      </button>
+    </div>
+  </header>
+
+  <div id="notificacion" class="notificacion oculto">
+    <span class="mensaje-notificacion"></span>
+  </div>
+
+  <section class="hero">
+    <div class="contenido-hero">
+      <h2>ENERGÍA PARA TU CUERPO</h2>
+      <p>Batidos nutricionales diseñados científicamente para maximizar tu rendimiento y recuperación</p>
+      <button class="btn btn-hero">DESCUBRE NUESTROS PRODUCTOS</button>
+    </div>
+    <div class="banner-promo">
+      <h3>¡PROMOCIÓN DE LANZAMIENTO!</h3>
+      <p>Compra 6 batidos y llévate 1 GRATIS + 15% de descuento en tu próximo pedido</p>
+      <p class="codigo-promo">Código: <strong>SMART15</strong></p>
+      <button class="btn">ORDENA AHORA</button>
+    </div>
+  </section>
+
+  <section id="beneficios" class="beneficios">
+    <h2>BENEFICIOS SMARTFOOD PRO</h2>
+    <div class="grid-beneficios">
+      <div class="tarjeta-beneficio">
+        <i class="fas fa-bolt"></i>
+        <h3>Energía Sostenible</h3>
+        <p>Combina carbohidratos complejos y azúcares naturales para una energía que dura</p>
+      </div>
+      <div class="tarjeta-beneficio">
+        <i class="fas fa-brain"></i>
+        <h3>Enfoque Mental</h3>
+        <p>Nutrientes que mejoran la función cognitiva y la concentración</p>
+      </div>
+      <div class="tarjeta-beneficio">
+        <i class="fas fa-heartbeat"></i>
+        <h3>Recuperación Rápida</h3>
+        <p>Aminoácidos esenciales para reparar tejidos muscular</p>
+      </div>
+      <div class="tarjeta-beneficio">
+        <i class="fas fa-seedling"></i>
+        <h3>100% Natural</h3>
+        <p>Ingredientes orgánicos sin aditivos artificiales</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="productos" class="slider-productos">
+    <h2>NUESTRA CARTA DE BATIDOS</h2>
+    <p class="subtitulo-seccion">Selección premium de combinaciones científicamente formuladas</p>
+    <div class="contenedor-slider">
+      <button class="boton-slider anterior"><i class="fas fa-chevron-left"></i></button>
+      <div class="slider">
+        <div class="slide">
+          <img src="https://images.unsplash.com/photo-1588929473475-d16ffd5d068c?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Batido Proteico"/>
+          <h3>CEREBRO ACTIVO</h3>
+          <p class="ingredientes">Arándanos, Yogurt natural, cacao, miel</p>
+          <p class="nutricion">350 kcal | 28g proteína | 5g fibra</p>
+          <p class="beneficios">✔ Ideal post-entreno ✔ Construcción muscular ✔ Saciedad prolongada</p>
+          <p class="precio">$2.99</p>
+          <button class="btn btn-slide">AÑADIR AL CARRITO</button>
+        </div>
+        <div class="slide">
+          <img src="https://images.unsplash.com/photo-1570696516188-ade861b84a49?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Energía Natural"/>
+          <h3>REPARACIÓN TOTAL</h3>
+          <p class="ingredientes">Agua de coco, Frambuesa o fresa, aguacate, miel</p>
+          <p class="nutricion">280 kcal | 5g proteína | 8g fibra</p>
+          <p class="beneficios">✔ Desintoxicante ✔ Refrescante ✔ Energía Natural 
+            <br>
+            <br>
+        
+          </p>
+          <p class="precio">$2.49</p>
+          <button class="btn btn-slide">AÑADIR AL CARRITO</button>
+        </div>
+        <div class="slide">
+          <img src="https://plus.unsplash.com/premium_photo-1700084621249-b22c621ac4e9?q=80&w=1921&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Cerebro Activo"/>
+          <h3>EQUILIBRIO NATURAL</h3>
+          <p class="ingredientes">Manzana verde, espinaca, leche vegetal, avena, almendra molida, miel</p>
+          <p class="nutricion">320 kcal | 18g proteína | 7g fibra</p>
+          <p class="beneficios">✔ Mejora cognitiva ✔ Antioxidante ✔ Memoria</p>
+          <p class="precio">$3.49</p>
+          <button class="btn btn-slide">AÑADIR AL CARRITO</button>
+        </div>
+        <div class="slide">
+          <img src="https://images.unsplash.com/photo-1638176066781-31ad97feacc9?q=80&w=2080&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Reparación Total"/>
+          <h3>KIWI VITAL</h3>
+          <p class="ingredientes">Kiwi, Manzana verde, limón, agua de coco, miel</p>
+          <p class="nutricion">380 kcal | 22g proteína | 9g fibra</p>
+          <p class="beneficios">✔ Recuperación muscular ✔ Hidratación ✔ Antiinflamatorio
+            <br>
+            <br>
+          </p>
+          <p class="precio">$2.99</p>
+          <button class="btn btn-slide">AÑADIR AL CARRITO</button>
+        </div>
+        
+      </div>
+      <button class="boton-slider siguiente"><i class="fas fa-chevron-right"></i></button>
+    </div>
+  </section>
+
+  <section class="mezclador-personalizado">
+    <h2>CREA TU BATIDO PERSONALIZADO</h2>
+    <p class="subtitulo-seccion">Combina tus ingredientes favoritos para un batido a tu medida</p>
+    <div class="opciones-mezclador">
+      <div class="opcion">
+
+        <h3><i class="fas fa-glass-whiskey"></i> Base Líquida</h3>
+        <select>
+          <option value="almond">Leche de Almendras (Baja en calorías)</option>
+          <option value="oat">Leche de Avena (Rica en fibra)</option>
+          <option value="coconut">Agua de Coco (Electrolitos naturales)</option>
+          <option value="milk">Leche Deslactosada (Proteína animal)</option>
+          <option value="juice">Jugo Natural (Energía rápida)</option>
+        </select>
+      </div>
+      <div class="opcion">
+        <h3><i class="fas fa-apple-alt"></i> Fruta Principal</h3>
+        <select>
+          <option value="blueberry">Arándanos (Antioxidantes)</option>
+          <option value="strawberry">Fresa (Vitamina C)</option>
+          <option value="banana">Plátano (Potasio)</option>
+          <option value="mango">Mango (Vitamina A)</option>
+          <option value="pineapple">Piña (Digestión)</option>
+        </select>
+      </div>
+      <div class="opcion">
+        <h3><i class="fas fa-dumbbell"></i> Fuente de Proteína</h3>
+        <select>
+          <option value="whey">Proteína de Suero (Musculación)</option>
+          <option value="vegan">Proteína Vegetal (Vegano)</option>
+          <option value="yogurt">Yogurt Griego (Probióticos)</option>
+          <option value="peanut">Mantequilla de Maní (Energía densa)</option>
+        </select>
+      </div>
+      <div class="opcion">
+        <h3><i class="fas fa-plus-circle"></i> Toppings</h3>
+        <select>
+          <option value="chia">Semillas de Chía (Omega-3)</option>
+          <option value="flax">Semillas de Lino (Fibra)</option>
+          <option value="cacao">Cacao Crudo (Antioxidantes)</option>
+          <option value="ginger">Jengibre (Antiinflamatorio)</option>
+          <option value="oats">Avena (Energía sostenida)</option>
+        </select>
+      </div>
+    </div>
+    <div class="resumen-mezclador">
+      <h4>Resumen Nutricional Estimado:</h4>
+      <p>Calorías: 320 | Proteína: 22g | Carbohidratos: 45g | Fibra: 8g</p>
+    </div>
+    <button class="btn btn-grande">AGREGAR AL CARRITO ($4.99)</button>
+  </section>
+
+  <section id="servicios" class="servicios">
+    <h2>EXPERIENCIA SMARTFOOD PRO</h2>
+    <p class="subtitulo-seccion">Más que batidos, un ecosistema de bienestar</p>
+    <div class="tarjetas-servicio">
+      <div class="tarjeta">
+        <div class="icono-tarjeta">
+          <i class="fas fa-truck-fast"></i>
+        </div>
+        <h3>Delivery Express</h3>
+        <p>Recibe tu batido fresco en menos de 30 minutos con nuestro servicio prioritario</p>
+        <p class="destacado">Disponible de 7am a 8pm</p>
+      </div>
+      <div class="tarjeta">
+        <div class="icono-tarjeta">
+          <i class="fas fa-user-md"></i>
+        </div>
+        <h3>Asesoría Nutricional</h3>
+        <p>Sesión gratuita con nuestros nutricionistas deportivos para optimizar tu plan</p>
+        <p class="destacado">Citas presenciales o virtuales</p>
+      </div>
+      <div class="tarjeta">
+        <div class="icono-tarjeta">
+          <i class="fas fa-calendar-star"></i>
+        </div>
+        <h3>Suscripciones</h3>
+        <p>Planes personalizados con entregas programadas y descuentos exclusivos</p>
+        <p class="destacado">Ahorra hasta 25%</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="nosotros" class="sobre-nosotros">
+    <div class="contenido-sobre-nosotros">
+      <h2>NUESTRA FILOSOFÍA</h2>
+      <p class="mision">"Nutrición inteligente para mentes y cuerpos extraordinarios"</p>
+      <div class="texto-sobre-nosotros">
+        <p> Smartfood PRO nace de la necesidad de combinar ciencia nutricional con sabores excepcionales. Nuestros batidos son formulados con investigación clínica para optimizar cada fase de tu actividad física.</p>
+        <p>Utilizamos sólo ingredientes naturales, provenientes de agricultura sostenible y proveedores locales cuando es posible. Cada receta es balanceada para proporcionar macro y micronutrientes esenciales sin sacrificar el sabor.</p>
+      </div>
+      <div class="caracteristicas-sobre-nosotros">
+        <div class="caracteristica">
+          <i class="fas fa-flask"></i>
+          <p>Formulación científica</p>
+        </div>
+        <div class="caracteristica">
+          <i class="fas fa-leaf"></i>
+          <p>Ingredientes orgánicos</p>
+        </div>
+        <div class="caracteristica">
+          <i class="fas fa-medal"></i>
+          <p>Certificación deportiva</p>
+        </div>
+      </div>
+    </div>
+    <div class="imagen-sobre-nosotros">
+      <img src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=870&q=80" alt="Equipo Smartfood PRO">
+    </div>
+  </section>
+
+  <section id="testimonios" class="testimonios">
+    <h2>RESEÑAS</h2>
+    <p class="subtitulo-seccion">Lo que dicen nuestros clientes</p>
+    <div class="slider-testimonios">
+      <div class="testimonio">
+        <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=387&q=80" alt="Carlos Martínez">
+        <div class="contenido-testimonio">
+          <p>"Los batidos de recuperación cambiaron mi rutina post-entreno. En 30 minutos ya me siento listo para la siguiente sesión."</p>
+          <div class="info-cliente">
+            <h4>Carlos Martínez</h4>
+            <p>Triatleta profesional</p>
+            <div class="estrellas">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="testimonio">
+        <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=388&q=80" alt="Ana Rodríguez">
+        <div class="contenido-testimonio">
+          <p>"Como nutricionista, recomiendo Smartfood PRO por su balance perfecto entre nutrición y calidad organoléptica."</p>
+          <div class="info-cliente">
+            <h4>Ana Rodríguez</h4>
+            <p>Nutricionista deportiva</p>
+            <div class="estrellas">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star-half-alt"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="video-promo">
+    <h2>PRODUCTOS</h2>
+    <p class="subtitulo-seccion">Catalogo de batidos </p>
+    <div class="contenedor-video">
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/FakTfGXeBak" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </div>
+    <div class="caracteristicas-video">
+      <div class="caracteristica-video">
+        <i class="fas fa-microscope"></i>
+        <p>Investigación nutricional</p>
+      </div>
+      <div class="caracteristica-video">
+        <i class="fas fa-blender"></i>
+        <p>Preparación artesanal</p>
+      </div>
+      <div class="caracteristica-video">
+        <i class="fas fa-bolt"></i>
+        <p>Entrega express</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="llamado-accion">
+    <h2>¿LISTO PARA EXPERIMENTAR LA DIFERENCIA?</h2>
+    <p>Descarga nuestra app </p>
+    <div class="botones-app">
+      <button class="btn-app">
+        <i class="fab fa-apple"></i>
+        <span>App Store</span>
+      </button>
+      <button class="btn-app">
+        <i class="fab fa-google-play"></i>
+        <span>Google Play</span>
+      </button>
+    </div>
+  </section>
+
+  <footer id="contacto">
+    <div class="contenido-footer">
+      <div class="seccion-footer">
+        <h3>Smartfood PRO</h3>
+        <p>Nutrición inteligente para atletas exigentes. Calidad comprobada, resultados visibles.</p>
+        <div class="redes-footer">
+          <a href="#"><i class="fab fa-facebook-f"></i></a>
+          <a href="#"><i class="fab fa-instagram"></i></a>
+          <a href="#"><i class="fab fa-tiktok"></i></a>
+          <a href="#"><i class="fab fa-youtube"></i></a>
+        </div>
+      </div>
+      <div class="seccion-footer">
+        <h3>Enlaces Rápidos</h3>
+        <ul>
+          <li><a href="#productos">Nuestros Batidos</a></li>
+          <li><a href="#servicios">Planes y Servicios</a></li>
+          <li><a href="#nosotros">Sobre Nosotros</a></li>
+          <li><a href="#">Blog Nutricional</a></li>
+          <li><a href="#">Trabaja con Nosotros</a></li>
+        </ul>
+      </div>
+      <div class="seccion-footer">
+        <h3>Contacto</h3>
+        <p><i class="fas fa-map-marker-alt"></i> Av. Principal #123, Masaya, Nicaragua</p>
+        <p><i class="fas fa-phone"></i> +505 54789520</p>
+        <p><i class="fas fa-envelope"></i> hola@smartfoodpro.com</p>
+        <p><i class="fas fa-clock"></i> Lunes a Sábado: 6:30am - 8:00pm</p>
+      </div>
+      <div class="seccion-footer">
+        <h3>Obten más información</h3>
+        <p>Suscríbete para recibir ofertas exclusivas y consejos nutricionales</p>
+        <form class="formulario-newsletter">
+          <input type="email" placeholder="Uni@gmail.com">
+          <button type="submit"><i class="fas fa-paper-plane"></i></button>
+        </form>
+      </div>
+    </div>
+    <div class="pie-footer">
+      <p>&copy; 2025 Smartfood PRO. Todos los derechos reservados.</p>
+      <div class="enlaces-footer">
+        <a href="#">Términos y Condiciones</a>
+        <a href="#">Política de Privacidad</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
